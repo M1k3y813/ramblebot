@@ -127,6 +127,9 @@ public class UnigramWordPredictor implements WordPredictor {
     if (neighbors == null || neighbors.isEmpty()) {
       return getRandomWordFromMap();
     }
+
+    int randomIndex = (int) (Math.random() * neighbors.size());
+    return neighbors.get(randomIndex);
     
   }
   
