@@ -132,6 +132,15 @@ public class UnigramWordPredictor implements WordPredictor {
     return neighbors.get(randomIndex);
     
   }
+
+  private String getRandomWordFromMap() {
+    if (neighborMap.isEmpty()) {
+      return "";
+    }
+    List<String> allKeys = new ArrayList<>(neighborMap.keySet());
+    int randomIndex = (int) (Math.random() * allKeys.size());
+    return allKeys.get(randomIndex);
+  }
   
   /**
    * Returns a copy of the neighbor map. The neighbor map is a mapping 
