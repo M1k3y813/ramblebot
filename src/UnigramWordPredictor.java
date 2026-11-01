@@ -122,6 +122,7 @@ public class UnigramWordPredictor implements WordPredictor {
       return getRandomWordFromMap();
     }
     String lastWord = context.get(context.size() - 1);
+    List<String> neighbors = neighborMap.get(lastWord);
     
   }
   
