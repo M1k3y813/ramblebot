@@ -123,6 +123,10 @@ public class UnigramWordPredictor implements WordPredictor {
     }
     String lastWord = context.get(context.size() - 1);
     List<String> neighbors = neighborMap.get(lastWord);
+
+    if (neighbors == null || neighbors.isEmpty()) {
+      return getRandomWordFromMap();
+    }
     
   }
   
